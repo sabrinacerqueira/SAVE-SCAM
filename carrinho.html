@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.png" id="icone">
+    <title>Save Scam</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+    <header>
+    </header>
+    <!-- Menu -->
+    <nav class="menufixo">
+        <img src="imgs/logo.png" alt="Logo da Empresa" id="logo">
+        <a href="index.html">Home</a>
+        <a href="#produtos">Jogos</a>
+        <a href="#contato">Contato</a>
+        <a> <button onclick="abrirForm(event)" style="background:none; border:none; padding:0; cursor:pointer;">
+        <img src="https://cdn-icons-png.flaticon.com/128/8861/8861686.png" alt="login" width="40" height="40">
+        </button></a>
+    </nav>
+<main>
+       <section id="topo" class="boxtexto">
+            <h1>Bem-vindo ao Save Scam!</h1>
+            <img src="imgs/negocinho.png" id="negocinho">
+            <p>Verifique os games parceiros com Save Scam!</p>
+            <a href="#galeria">
+            </a>
+        </section>
+        <!-- Produtos-->
+<div class="produtos_carrinho">
+<section id="produtos">
+    
+            
+    <div class="card">
+        <img src="jogos/jogo1.png" alt="Imagem Jogo 1" class="bloco">
+        <h1>Final Fantasy XVI</h1>
+        <p class="valor">R$249,50</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+          
+    <div class="card">
+        <img src="jogos/jogo2.png" alt="Imagem Jogo 2" class="bloco">
+        <h1>Mortal Kombat 1</h1>
+        <p class="valor">R$289,90</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+          
+    <div class="card">
+        <img src="jogos/jogo3.png" alt="Imagem Jogo 3" class="bloco">
+        <h1>God Of War Ragnarok</h1>
+        <p class="valor">R$187,00</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+    
+    <div class="card" >
+        <img src="jogos/jogo4.png" alt="Imagem Jogo 4" class="bloco">
+        <h1>Horizon Forbidden West</h1>
+        <p class="valor">R$199,90</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+
+    <div class="card">
+        <img src="jogos/jogo5.png" alt="Imagem Jogo 5" class="bloco">
+        <h1>The Last Of Us Part II</h1>
+        <p class="valor">R$250,00</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+            
+    <div class="card">
+        <img src="jogos/jogo6.png" alt="Imagem Jogo 6" class="bloco">
+        <h1>EAFC 25</h1>
+        <p class="valor">R$200,00</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+
+    <div class="card">
+        <img src="jogos/jogo7.png" alt="Imagem Jogo 7" class="bloco">
+        <h1>Ghost Of Tsushima</h1>
+        <p class="valor">R$179,90</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+
+    <div class="card">
+        <img src="jogos/jogo8.png" alt="Imagem Jogo 8" class="bloco">
+        <h1>The Last Of Us Part I</h1>
+        <p class="valor">R$189,90</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+
+    <div class="card">
+        <img src="jogos/jogo9.png" alt="Imagem Jogo 9" class="bloco">
+        <h1>Uncharted 4</h1>
+        <p class="valor">R$179,90</p>
+        <input class="button" type="button" value="Adicionar ao Carrinho" onclick="addcarrinho(this)">
+    </div>
+</section>
+<!-- área do carrinho-->
+<section id="carrinho">
+
+  <h1>Carrinho</h1>
+  <img src="imgs/negocinho.png" id="negocinho_carrinho">
+  <h2>Itens</h2>
+
+  <div class="carrinho-container">
+    <div id="listaProdutos"></div>
+    <p class="total" id="valortotal">Total: R$0,00</p>
+    <button id="botaocomprar" onclick="abrirForm(event)">Comprar</button>
+    <br>
+    <button id="botaoapagar" onclick="apagarLista()">Apagar tudo</button>
+  </div>
+</section>
+</div>
+<!-- POP-UP LOGIN-->
+
+<div id="fundoescuro" onclick="fecharForm()">
+    <div class="form-popup"></div>
+        <div id="formulario" onclick="event.stopPropagation()">
+        <form class="form-container">
+            <div>
+            <h1>Login</h1>
+            <img src="imgs/negocinho.png" id="negocinhologin">
+            <br><br><br>
+            </div>
+            <label for="email">Email</label><br>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <br>
+            <label for="psw">Password</label><br>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="fecharForm()">Fechar</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- SCRIPT -->
+  <script>
+    
+    // VARIAVEL DO TOTAL NO FINAL
+    let valortotal = 0;
+
+    //BOTAO ADICIONAR AO CARRINHO
+    function addcarrinho(botao){
+      const card = botao.closest('.card'); 
+      const nome = card.querySelector('h1').textContent;
+      const preco = card.querySelector('.valor').textContent;
+      
+      console.log(nome, preco);
+
+      const lista = document.getElementById("listaProdutos");
+      const item = document.createElement("div");
+            item.style.color ="white";
+            item.style.border = "1px solid #43F7F6";
+            item.style.padding = "5px";
+            item.style.marginBottom = "15px";
+            item.style.borderRadius = "10px";
+            item.style.display = "flex";
+            item.style.justifyContent = "space-between";        
+    
+      const paragrafo = document.createElement("p");
+            paragrafo.textContent = nome + " - " + preco;
+            paragrafo.style.color = "white";
+            paragrafo.style.fontWeight = "400";
+            paragrafo.style.fontSize = "16px";
+            item.appendChild(paragrafo);
+            lista.appendChild(item);
+  // BOTAO EXCLUIR
+      const botaoExcluir = document.createElement("button");
+            botaoExcluir.id='botaoexcluir';
+            botaoExcluir.style.fontFamily = "origintech, serif";
+            botaoExcluir.textContent = "Excluir Item";
+            botaoExcluir.style.backgroundColor = "#2d0136d5";
+            botaoExcluir.style.color = "white";
+            botaoExcluir.style.borderRadius = "5px";
+            botaoExcluir.onclick = function(){
+              const valorItem = parseFloat(preco.replace('R$', ''));
+              valortotal -= valorItem;
+              document.getElementById("valortotal").textContent = "Total: R$" + valortotal.toFixed(2);
+              lista.removeChild(item);
+            }
+            item.appendChild(botaoExcluir);
+  
+  // VARIAVEL PARA CONVERTER O PRECO 
+            valorconvertido = parseFloat(preco.replace('R$', ''));
+            valortotal += valorconvertido;
+            document.getElementById("valortotal").textContent = "Total: R$ " +valortotal.toFixed(2);
+    }
+  //BOTAO APAGAR TUDO
+            const lista = document.getElementById("listaProdutos");
+            function apagarLista(){
+            lista.textContent = "";
+            valortotal=0;
+            document.getElementById("valortotal").textContent = "Total: R$" + valortotal.toFixed(2);
+            lista.removeChild(item);
+            }
+  // ABRIR POP-UP LOGIN
+            function abrirForm(event) {
+            document.getElementById('fundoescuro').style.display = 'flex';
+            } 
+ // FECHAR POP-UP LOGIN
+            function fecharForm() {
+            document.getElementById('fundoescuro').style.display = 'none';
+            }
+                
+</script>
+
+<!-- RODAPÉ -->
+<footer class="rodape" id="contato">
+    <div class="rodape-container">
+      
+      <div class="rodape-coluna">
+        <h4>Save Scam</h4>
+        <p>Jogos que são seus</p>
+      </div>
+  
+      <div class="rodape-coluna">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#topo">Home</a></li>
+          <li><a href="#galeria">jogos</a></li>
+          <li><a href="#meio">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+  
+      <div class="rodape-coluna">
+        <h4>Contato</h4>
+        <p>📱 (11) 3406-1212</p>
+        <p>📨 contato@savescam.com</p>
+      </div>
+  
+      <div class="rodape-coluna">
+        <h4>Redes Sociais</h4>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+              <img src="https://cdn-icons-png.flaticon.com/128/1400/1400487.png" alt="Instagram" width="30" height="30">
+            </a>
+          
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <img src="https://cdn-icons-png.flaticon.com/128/1400/1400477.png" alt="Facebook" width="30" height="30">
+            </a>
+    
+            <a href="https://wa.me/1397604888" target="_blank" aria-label="WhatsApp">
+              <img src="https://cdn-icons-png.flaticon.com/128/8684/8684514.png" alt="WhatsApp" width="30" height="30">
+            </a>
+          </div>
+      </div>
+  
+    </div>
+  
+    <div class="rodape-direitos">
+      <p>&copy; 2025 SAVE SCAM | Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</main>
+</body>
+</html> 

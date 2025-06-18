@@ -1,0 +1,477 @@
+/* fontes */
+@font-face {
+  font-family: 'origintech';
+  src: url('fontes/OriginTech.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ #topo{
+    scroll-margin-top: 60px;
+  }
+  #galeria{
+    scroll-margin-top: 80px;
+  }
+  #meio{
+    scroll-margin-top: 60px;
+  }
+  #contato{
+    scroll-margin-top: 80px;
+  }
+/* titulo */
+header{
+  font-family: "origintech", serif;
+  font-weight: 400px;
+  font-style: normal;
+}
+/* corpo */
+body {  
+  font-family: "origintech", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  background: linear-gradient(to bottom, #550068 60%, #43F7F6); 
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+section {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+/* menu */
+.menufixo {
+  position: sticky;
+  top: 0;
+  background-color: #4b005c;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+}
+.menufixo a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 15px;
+  margin-left: 12%;
+  transition: transform 0.8s ease; 
+  transition: background-color 0.8s ease;
+}
+.menufixo a:hover {
+  background-color: #43F7F6;
+  border-radius: 4%;    
+  transform: scale(1.1);
+}
+#logo{
+  width: 10%;
+  transition: transform 0.5s ease;
+}
+#logo:hover{
+  transform: scale(1.1);
+}
+a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 15px; 
+}
+#negocinho{
+    width: 25%;
+    position: sticky;
+    left:37.5%;
+    transition: transform 0.4s ease;
+}
+#negocinho:hover {
+  transform: scale(1.1); 
+}
+/* texto */
+.boxtexto {
+   display: block;
+   text-align: center;
+   margin: 20px;
+}
+.boxtexto h1 {
+  font-size: 40px;  
+  text-align: center; 
+  color: white; 
+}
+.boxtexto p {
+  font-size: 25px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* conteudo do meio da pagina */
+.meio {
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+.meio h1 {
+  margin-top: 50px;
+  margin-left: 32%;
+  color:white; 
+  font-size: 34px;
+}
+.meio p{
+  font-size: 25px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+#imgeesq {
+  display: inline-block; 
+  width: 27%; 
+  vertical-align: middle; 
+  margin-right: 20px; 
+  border-radius: 4%;
+  transition: transform 0.5s ease;
+}
+#imgeesq:hover{
+  transform: scale(1.1);
+}
+.texto {
+  display: inline-block; 
+  width: 50%;
+  vertical-align: middle; 
+  text-align: justify; 
+  padding: 10px;
+}
+.sobrenos{
+    margin-left: 32%;
+}
+h1, h2 {
+  font-family: "origintech", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
+p {
+  font-family: "origintech", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: white;
+}
+main {
+  width: 100%;
+  margin: auto; 
+}
+
+/* imagens */
+#galeria {
+  width: 94%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;  
+}
+.card {
+  display: inline-block;
+  width: calc(33% - 30px);
+  margin: 15px; 
+  background: linear-gradient(to bottom, #550068 40%, #43f7f775);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  vertical-align: top; 
+  min-height: 720px;
+  transition: transform 0.5s ease;
+}
+.card:hover{
+  transform: scale(1.03);
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card h1 {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  padding: 15px ;
+}
+.card p {
+  font-size: 16px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+.card .button {
+  background-color: #2d0136d5;
+  color:white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+.card .button:hover{
+  transform: scale(1.2);
+}
+#imgfixa {
+ width: 4%;
+ position: fixed;
+ right: 0;
+ bottom: 0;
+ transition: transform 0.4s ease;
+}
+#imgfixa:hover {
+ transform: scale(1.1);
+}
+
+/* botões */
+.button {
+  color:#4b005c;
+  font-family: "origintech", serif;
+  border-style: none;
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  background-color:white;
+  border-radius: 50px;
+  transition: transform 0.2s ease;
+}
+.button:hover {
+  color: #ffffff;
+  background-color: #43f7f7c2; 
+  transform: scale(1.1);
+}
+
+/* seção contato */
+#contato {
+  width: 80%;
+  margin:0 auto;
+  margin-bottom: 1%;
+  border-radius: 1%;
+  background-color: #4b005c31;
+  padding: 40px 20px;
+  text-align: center;
+  color:#43F7F6
+}
+#contato h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color:#43F7F6
+}
+#contato p {
+  color:#43F7F6;
+  margin-bottom: 20px;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+}
+.formulario input,
+.formulario textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "origintech", serif;
+}
+.formulario textarea {
+  min-height: 100px;
+}
+.formulario button {
+  background-color:#43f7f793;
+  color:#550068;
+  border: none;
+  cursor: pointer;
+}
+.formulario button:hover {
+  background-color:#4b005c;
+}
+
+/* rodapé */
+.rodape {
+  background-color:#4b005c;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  font-family: "origintech", serif;
+}
+.rodape-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.rodape-coluna {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+.rodape-coluna h4 {
+  font-family: "origintech", serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color:#43F7F6;
+  font-weight: 400;
+  font-size: 14px;
+}
+.rodape-coluna p, .rodape-coluna ul li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.rodape-coluna ul {
+  list-style: none;
+  padding: 0;
+}
+.rodape-coluna ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.5s ease; 
+  transition: background-color 0.2s ease;
+}
+.rodape-coluna ul li a:hover {
+  background-color: #43f7f7bb;
+  border-radius: 4%;
+}
+.redes-sociais {
+  margin-top: 20px;
+}
+.redes-sociais a {
+  display: inline-block;
+  padding: 10px;
+  background-color:#2d0136;
+  border-radius: 8px;
+  margin: 0 5px;
+  transition: transform 0.2s ease;
+}
+.redes-sociais a:hover {
+  background-color:#43f7f728; 
+  transform: scale(1.1);
+}
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+}
+.rodape-direitos {
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* responsividade  */
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+ 
+  .menufixo {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+ 
+  #logo {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+ 
+  .menufixo a {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 8px;
+    margin-left: 0;
+  }
+ 
+  .boxtexto h1 {
+    font-size: 24px;
+  }
+ 
+  .boxtexto p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+ 
+  #negocinho {
+    width: 60%;
+    left: 20%;
+  }
+ 
+  .meio {
+    text-align: center;
+  }
+ 
+  .meio h1 {
+    font-size: 24px;
+    margin-left: 0;
+  }
+ 
+  #imgeesq {
+    width: 80%;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+ 
+  .texto {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: justify;
+  }
+ 
+  .card {
+    width: 100%;
+    margin: 10px auto;
+    min-height: auto;
+  }
+ 
+  .card h1 {
+    font-size: 20px;
+  }
+ 
+  .card p {
+    font-size: 16px;
+  }
+ 
+  .card .button {
+    width: 80%;
+    padding: 10px;
+  }
+ 
+  #imgfixa {
+    width: 12%;
+    right: 10px;
+    bottom: 10px;
+  }
+ 
+  .formulario {
+    width: 100%;
+    padding: 0 10px;
+  }
+ 
+  .formulario input, .formulario textarea {
+    font-size: 14px;
+  }
+ 
+  .formulario button {
+    width: 100%;
+    font-size: 16px;
+  }
+ 
+  .rodape-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+ 
+  .rodape-coluna {
+    margin-bottom: 20px;
+  }
+}
